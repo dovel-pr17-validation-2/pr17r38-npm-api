@@ -1,0 +1,21 @@
+{
+  "name": "@api/test-utils",
+  "version": "7.0.0",
+  "private": true,
+  "scripts": {
+    "lint:types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@readme/oas-examples": "^8.2.2",
+    "caseless": "^0.12.0",
+    "datauri": "^4.1.0",
+    "nock": "^15.0.5",
+    "oas": "^38.6.0",
+    "oas-normalize": "^18.0.3",
+    "vitest": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/caseless": "^0.12.3",
+    "typescript": "^5.8.2"
+  }
+}

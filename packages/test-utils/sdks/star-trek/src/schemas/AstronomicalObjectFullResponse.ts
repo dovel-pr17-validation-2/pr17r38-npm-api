@@ -1,0 +1,13 @@
+import AstronomicalObjectFull from './AstronomicalObjectFull.js';
+
+const AstronomicalObjectFullResponse = {
+  "type": "object",
+  "description": "Response object for single astronomical object query",
+  "properties": {
+    "astronomicalObject": AstronomicalObjectFull
+  },
+  "title": "AstronomicalObjectFullResponse",
+  "x-readme-ref-name": "AstronomicalObjectFullResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#"
+} as const;
+export default AstronomicalObjectFullResponse

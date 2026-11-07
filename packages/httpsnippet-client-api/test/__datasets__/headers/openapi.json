@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0",
+    "title": "headers"
+  },
+  "servers": [
+    {
+      "url": "https://httpbin.org"
+    }
+  ],
+  "paths": {
+    "/anything": {
+      "get": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "x-foo",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-bar",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reqKey",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "1"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

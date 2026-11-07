@@ -1,0 +1,7 @@
+.api/
+**/.turbo/
+coverage/
+**/coverage/**
+dist/
+node_modules/
+**/*.tsbuildinfo

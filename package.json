@@ -1,0 +1,44 @@
+{
+  "name": "api-monorepo",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/readmeio/api.git"
+  },
+  "workspaces": [
+    "./packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "attw": "turbo run attw --concurrency=1",
+    "build": "turbo run build",
+    "build-docs": "node bin/build-markdown.js",
+    "changeset": "changeset",
+    "format": "npx oxlint --fix && npx oxfmt --write",
+    "lint": "knip && npm run lint:types && npx oxlint && npx oxfmt --check",
+    "lint:types": "npm run lint:types --if-present --workspaces",
+    "prerelease": "npm run build",
+    "pretest": "npm run build",
+    "release": "changeset publish",
+    "test": "npx vitest run --coverage",
+    "test:smoke": "npm run test:smoke --workspace=packages/api",
+    "version-packages": "changeset version"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@changesets/cli": "^3.0.3",
+    "@readme/oxlint-config": "^15.0.9",
+    "@tsconfig/node22": "^22.0.6",
+    "@vitest/coverage-v8": "^5.1.0",
+    "knip": "^6.44.1",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "tsup": "^8.4.0",
+    "turbo": "^2.11.10",
+    "vitest": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "npm@10.9.4"
+}

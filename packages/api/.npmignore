@@ -1,0 +1,6 @@
+.api/
+coverage/
+test/
+.gitignore
+vitest*
+example.js
