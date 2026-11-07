@@ -47,7 +47,7 @@
     "@readme/api-core": "7.0.3",
     "chalk": "^6.0.1",
     "ci-info": "^4.0.0",
-    "commander": "^14.0.0",
+    "commander": "^15.1.0",
     "emphasize": "^7.0.0",
     "execa": "^8.0.1",
     "figures": "^6.0.1",
